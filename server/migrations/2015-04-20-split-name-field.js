@@ -7,13 +7,14 @@ Migrations.add({
     description: "Split the fullname field into firstname and lastname",
 
     expand: function () {
-      Customers.find().forEach(function (customer) {
-        var first = customer.fullname.split(' ')[0];
-        var last = customer.fullname.split(' ')[1];
-        Customers.update(customer._id, {$set: {firstname: first, lastname: last}});
-      });
+      console.log("split the name.")
+      // Customers.find().forEach(function (customer) {
+      //   var first = customer.fullname.split(' ')[0];
+      //   var last = customer.fullname.split(' ')[1];
+      //   Customers.update(customer._id, {$set: {firstname: first, lastname: last}});
+      // });
     },
     contract: function () {
-      Customers.update({}, {$unset: fullname}, {multi: true});
+      // Customers.update({}, {$unset: fullname}, {multi: true});
     }
 });
