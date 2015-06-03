@@ -1,1 +1,1 @@
-Migrations.contractDelay = 60 * 5
+Migrations.setContractDelay(20);
