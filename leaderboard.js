@@ -36,6 +36,7 @@ if (Meteor.isClient) {
 // On server startup, create some players if the database is empty.
 if (Meteor.isServer) {
   Meteor.startup(function () {
+    console.log("Inserting data...");
     if (Players.find().count() === 0) {
       var names = ["Ada Lovelace", "Grace Hopper", "Marie Curie",
                    "Carl Friedrich Gauss", "Nikola Tesla", "Claude Shannon"];
